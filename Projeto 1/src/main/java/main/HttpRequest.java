@@ -108,11 +108,14 @@ public class HttpRequest implements Runnable {
         if(fileName.endsWith(".htm") || fileName.endsWith(".html")) {
             return "text/html";
         }
-        if(true) {
-            //In the future, for the jpeg files;
+        if(fileName.endsWith(".png")) {
+            return "image/png";
         }
-        if(false) {
-            //In the future, for the gif files;
+        if(fileName.endsWith(".jpg") || fileName.endsWith(".jpeg")) {
+            return "image/jpeg";
+        }
+        if(fileName.endsWith(".gif")) {
+            return "image/gif";
         }
         return "application/octet-stream";
     }
